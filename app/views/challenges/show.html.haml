@@ -1,14 +1,11 @@
-%h1= @challenge.name
-
-= @challenge.description
-
-%br
-
-= @challenge.points
-
-%br
-
-- if user_signed_in?
-  = form_for :win, :url => win_challenge_path(@challenge) do |form|
-    = form.text_field :flag
-    = form.submit "Submit Flag"
+%div.w400
+  %div.shadowed-box
+    %h1= "#{@challenge.name} (#{@challenge.points} points)"
+    %br
+    %div= @challenge.description
+    %br
+    %br
+      - if user_signed_in?
+        = form_for :win, :url => win_challenge_path(@challenge) do |form|
+          = form.text_field :flag
+          = form.submit "Submit Flag"

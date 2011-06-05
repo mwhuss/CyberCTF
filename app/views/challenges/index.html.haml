@@ -1,0 +1,17 @@
+%h1 Challenges
+
+- for category in @categories
+  %div.shadowed-box
+    %h1
+      = category.name
+    %br
+      %table
+        %tr
+          %th.rounded-upper-left Name
+          %th Description
+          %th.rounded-upper-right Points
+        - for challenge in category.challenges
+          %tr{:class => cycle("even", "odd") }
+            %td= link_to truncate(challenge.name, :length => 40), challenge
+            %td= truncate(challenge.description, :length => 80)
+            %td= challenge.points

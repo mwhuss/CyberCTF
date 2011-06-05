@@ -1,0 +1,131 @@
+/*
+Template:	GT-FREE
+File:		custom.css - Use this file to add any custom styles you need
+
+If you add styles to this template, be sure to include it in your template files.
+*/
+
+.w400 {
+	width: 400px;
+}
+
+.w800 {
+  width: 800px;
+}
+
+.light {
+	color: #ccc;
+}
+
+.border-bottom {
+	border-bottom: 1px dashed #CCC;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+
+.login {
+	float: right;
+	padding: 5px 20px;
+	margin: 5px 20px;
+	
+	border: 1px solid #DDD;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 5px;
+	box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 5px;
+	background-color: #EFEFEF;
+}
+
+.shadowed-box {
+	margin: 20px 0 0;
+	padding: 10px 10px;
+	border: 1px solid #DDD;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 5px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 5px;
+	box-shadow: rgba(0, 0, 0, 0.496094) 0px 0px 5px;
+	background-color: #EFEFEF;
+}
+
+input[type="text"], input[type="password"], input[type="file"], textarea {
+	font-size: 10pt;
+	padding: 5px;
+	border: 1px solid #CCC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 6px;
+	margin-bottom: 10px;
+	width: 95%;
+}
+
+label {
+	display: block;
+	padding: 3px;
+}
+
+textarea {
+	height: 120px;
+}
+
+/* Button links and submit buttons */
+.button {
+  background: #749446 url(../images/button-overlay.png) repeat-x;
+  display: inline-block;
+  padding: 6px 17px 8px;
+  margin: 5px 0;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 1em;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+	border-radius: 18px;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  position: relative;
+  cursor: pointer;
+	text-decoration: none;
+}
+
+.rounded-upper-left {
+	-moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0;
+}
+
+.rounded-upper-right {
+	-moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;
+}
+
+table {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+table th {
+	background-color: #6caa00;
+	font-weight: bold;
+	padding: 10px;
+}
+
+table td {
+	padding: 10px;
+}
+
+table tr.even {
+	background-color: #fff;
+}
+
+table tr.odd {
+	background-color: #e6ffbb;
+}

@@ -1,0 +1,12 @@
+%div.w800
+  %div.shadowed-box
+    %h1 Scoreboard
+    %br
+      %table
+        %tr
+          %th.rounded-upper-left Handle
+          %th.rounded-upper-right Points
+        - for user in @users
+          %tr{:class => cycle("even", "odd") }
+            %td= link_to user.handle, user
+            %td= user.points  

@@ -1,13 +1,29 @@
 !!!
-%html
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %title CyberCtf
+    %title CyberCTF
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
-    = csrf_meta_tags
+    = csrf_meta_tag
   %body
-    - if user_signed_in?
-      = link_to "Sign out", destroy_user_session_path
-    - else
-      = link_to "Sign in", new_user_session_path
-    = yield
+    .gt-hd.clearfix
+      .login
+        = login_nav(current_user)
+      .gt-logo
+        Task Tracker
+      .gt-nav
+        %ul
+          %li= nav_link("Challenges", challenges_path, :challenges)
+          %li= nav_link("Scoreboard", scoreboard_path, :scoreboard)
+          - if current_user.try(:admin?)
+            %li= nav_link("Admin", admin_categories_path, :admin_categories)
+    .gt-bd.gt-cols.clearfix
+      .gt-content
+        = render :partial => 'layouts/flash', :locals => { :flash => flash }
+
+        = yield
+      .gt-sidebar
+    .gt-footer
+      %p
+      r0x0r your b0x0rs
+    

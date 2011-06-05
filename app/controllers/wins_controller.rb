@@ -8,7 +8,7 @@ class WinsController < ApplicationController
     
     if challenge.flag == flag
       current_user.challenges << challenge
-      current_user.update_attribute(:points, current_user.points + challenge.points)
+      current_user.calculate_score!
       redirect_to scoreboard_path, :notice => "EPIC WIN!"
     else
       redirect_to scoreboard_path, :alert => "EPIC FAIL!"

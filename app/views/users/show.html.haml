@@ -1,0 +1,14 @@
+%div.w800
+  %div.shadowed-box
+    %h1= "#{@user.handle} - #{@user.points} points"
+    %br
+      %table
+        %tr
+          %th.rounded-upper-left Challenge
+          %th Points
+          %th.rounded-upper-right Solved
+        - for win in @user.wins
+          %tr{:class => cycle("even", "odd") }
+            %td= link_to win.challenge.name, win.challenge
+            %td= win.challenge.points
+            %td= "#{time_ago_in_words(win.created_at)} ago"
