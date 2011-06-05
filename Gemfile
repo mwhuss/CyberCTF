@@ -17,6 +17,7 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'haml'
+gem 'pg'
 
 gem 'therubyracer-heroku',  '0.8.1.pre3'
 
