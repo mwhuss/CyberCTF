@@ -1,0 +1,14 @@
+%h1= @challenge.name
+
+= @challenge.description
+
+%br
+
+= @challenge.points
+
+%br
+
+- if user_signed_in?
+  = form_for :win, :url => win_challenge_path(@challenge) do |form|
+    = form.text_field :flag
+    = form.submit "Submit Flag"

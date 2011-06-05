@@ -1,4 +1,19 @@
 CyberCtf::Application.routes.draw do
+  devise_for :users
+  
+  resources :challenges do
+    post :win, :on => :member
+  end
+  
+  namespace "admin" do
+    match '/' => "categories#index"
+    resources :categories do
+      resources :challenges
+    end
+  end
+  
+  root :to => "scoreboard#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

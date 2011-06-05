@@ -1,0 +1,10 @@
+%h1= @category.name
+
+%h2 Challenges
+
+= link_to "New Challenge", new_admin_category_challenge_path(@category)
+
+%br
+%br
+
+= render @category.challenges

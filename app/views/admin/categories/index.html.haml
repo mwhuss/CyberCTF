@@ -1,0 +1,7 @@
+%h1 Categories
+
+= link_to "New Category", new_admin_category_path
+
+%ul
+  - for category in @categories
+    %li= link_to category.name, ['admin', category]
