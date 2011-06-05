@@ -1,8 +1,10 @@
 %h1 Categories
-
+%br
+= link_to "New Category", new_admin_category_path
+%br
+%br    
 - for category in @categories
   %div.shadowed-box
-    = link_to "New Category", new_admin_category_path
     %br
     %br
       %table
