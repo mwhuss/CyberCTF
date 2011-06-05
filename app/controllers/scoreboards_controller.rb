@@ -1,7 +1,7 @@
 class ScoreboardsController < ApplicationController
   
   def show
-    @users      = User.all.sort_by(&:points).reverse
+    @users = User.where(["admin = ?", false]).sort_by(&:points).reverse
   end
   
   
