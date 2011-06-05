@@ -1,3 +1,8 @@
+- if user_signed_in?
+  - if current_user.challenges.include?(@challenge)
+    %div.gt-notice
+      You've solved this one already!
+
 %div.w400
   %div.shadowed-box
     %h1= "#{@challenge.name} (#{@challenge.points} points)"

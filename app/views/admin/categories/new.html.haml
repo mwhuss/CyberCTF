@@ -1,6 +1,7 @@
-%h1 New Category
-
-= form_for ['admin', @category] do |form|
-  = form.label :name
-  = form.text_field :name
-  = form.submit "Create Category"
+%div.w400
+  %div.shadowed-box
+    %h1 New Category
+    = form_for ['admin', @category] do |form|
+      = form.label :name
+      = form.text_field :name
+      = form.submit "Create Category" 

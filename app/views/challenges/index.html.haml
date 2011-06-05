@@ -9,9 +9,12 @@
         %tr
           %th.rounded-upper-left Name
           %th Description
-          %th.rounded-upper-right Points
+          %th Points
+          %th.rounded-upper-right Solved by
         - for challenge in category.challenges
-          %tr{:class => cycle("even", "odd") }
+          - css_class = challenge_solved?(current_user, challenge) ? "solved" : cycle("even", "odd")
+          %tr{:class => css_class }
             %td= link_to truncate(challenge.name, :length => 40), challenge
             %td= truncate(challenge.description, :length => 80)
-            %td= challenge.points
+            %td= (challenge_solved?(current_user, challenge) ? "SOLVED!" : challenge.points)
+            %td= pluralize(challenge.wins.size, "hacker")

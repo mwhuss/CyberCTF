@@ -12,7 +12,7 @@ class Challenge < ActiveRecord::Base
   validates_numericality_of :points
   
   has_many :wins
-  has_many :users, :through => :wins
+  has_many :users, :through => :wins, :uniq => true
 
   
 end

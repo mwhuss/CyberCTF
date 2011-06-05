@@ -1,10 +1,17 @@
-%h1= @category.name
-
-%h2 Challenges
-
-= link_to "New Challenge", new_admin_category_challenge_path(@category)
-
-%br
-%br
-
-= render @category.challenges
+%div.w800
+  %div.shadowed-box
+    %h1= @category.name
+    %br
+    = link_to "New Challenge", new_admin_category_challenge_path(@category)
+    %br
+    %br
+      %table
+        %tr
+          %th.rounded-upper-left Name
+          %th Description
+          %th.rounded-upper-right Points
+        - for challenge in @category.challenges
+          %tr{:class => cycle("even", "odd") }
+            %td= link_to challenge.name, challenge
+            %td= truncate(challenge.description, :length => 60)
+            %td= challenge.points

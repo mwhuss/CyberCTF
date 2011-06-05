@@ -1,7 +1,14 @@
 %h1 Categories
 
-= link_to "New Category", new_admin_category_path
-
-%ul
-  - for category in @categories
-    %li= link_to category.name, ['admin', category]
+- for category in @categories
+  %div.shadowed-box
+    = link_to "New Category", new_admin_category_path
+    %br
+    %br
+      %table
+        %tr
+          %th.rounded-upper-left Name
+          %th.rounded-upper-right Challenges
+          %tr{:class => cycle("even", "odd") }
+            %td= link_to category.name, ['admin', category]
+            %td= category.challenges.size

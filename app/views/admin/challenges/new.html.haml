@@ -1,18 +1,21 @@
-%h1= "New Challenge (#{@category.name})"
+%div.w800
+  %div.shadowed-box
+    %h1= "New Challenge (#{@category.name})"
+    %br
 
-= form_for ['admin', @category, @challenge] do |form|
-  = form.label :name
-  %br
-  = form.text_field :name
-  %br
-  = form.label :description
-  %br
-  = form.text_area :description
-  %br
-  = form.label :points
-  = form.text_field :points
-  %br
-  = form.label :flag
-  = form.text_field :flag
-  %br
-  = form.submit "Create Challenge"
+    = form_for ['admin', @category, @challenge] do |form|
+      = form.label :name
+      %br
+      = form.text_field :name
+      %br
+      = form.label :description
+      %br
+      = form.text_area :description
+      %br
+      = form.label :points
+      = form.text_field :points
+      %br
+      = form.label :flag
+      = form.text_field :flag
+      %br
+      = form.submit "Create Challenge"

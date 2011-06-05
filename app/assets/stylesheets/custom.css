@@ -129,3 +129,7 @@ table tr.even {
 table tr.odd {
 	background-color: #e6ffbb;
 }
+
+table tr.solved {
+	background-color: #ff9;
+}
