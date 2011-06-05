@@ -6,5 +6,5 @@
 */
 @import "reset-fonts.css";
 @import "gt-styles.css";
-@import "custom";
-@import "override";
+@import "custom.css";
+@import "override.css";
